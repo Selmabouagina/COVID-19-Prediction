@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        COVID-19 Prediction
+    </title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .feature label {
+            flex: 1;
+        }
+
+        .checkbox-group {
+            display: flex;
+        }
+
+        .checkbox-group label {
+            margin-left: 8px;
+        }
+
+        .category-bar {
+            background-color: #3498db;
+            color: #fff;
+            padding: 8px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .instruction {
+            margin-bottom: 10px;
+        }
+
+        button {
+            color: #fff;
+            background-color: #3498db;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>COVID-19 Prediction</h1>
+    <form method="POST">
+        <div class="instruction">Check your symptoms below:</div>
+        <div class="section">
+            <div class="feature">
+                <label for="breathingProblem">Breathing Problem</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="breathingProblemYes" id="breathingProblemYes">
+                    <label for="breathingProblemYes">Yes</label>
+                    <input type="checkbox" name="breathingProblemNo" id="breathingProblemNo">
+                    <label for="breathingProblemNo">No</label>
+                </div>
+            </div>
+
+            <div class="feature">
+                <label for="fever">Fever</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="feverYes" id="feverYes">
+                    <label for="feverYes">Yes</label>
+                    <input type="checkbox" name="feverNo" id="feverNo">
+                    <label for="feverNo">No</label>
+                </div>
+            </div>
+
+            <div class="feature">
+                <label for="dryCough">Dry Cough</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="dryCoughYes" id="dryCoughYes">
+                    <label for="dryCoughYes">Yes</label>
+                    <input type="checkbox" name="dryCoughNo" id="dryCoughNo">
+                    <label for="dryCoughNo">No</label>
+                </div>
+            </div>
+
+            <div class="feature">
+                <label for="soreThroat">Sore Throat</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="soreThroatYes" id="soreThroatYes">
+                    <label for="soreThroatYes">Yes</label>
+                    <input type="checkbox" name="soreThroatNo" id="soreThroatNo">
+                    <label for="soreThroatNo">No</label>
+                </div>
+            </div>
+
+            <div class="feature">
+                <label for="runningNose">Running Nose</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="runningNoseYes" id="runningNoseYes">
+                    <label for="runningNoseYes">Yes</label>
+                    <input type="checkbox" name="runningNoseNo" id="runningNoseNo">
+                    <label for="runningNoseNo">No</label>
+                </div>
+            </div>
+
+            <div class="feature">
+                <label for="headache">Headache</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="headacheYes" id="headacheYes">
+                    <label for="headacheYes">Yes</label>
+                    <input type="checkbox" name="headacheNo" id="headacheNo">
+                    <label for="headacheNo">No</label>
+                </div>
+            </div>
+
+            <div class="feature">
+                <label for="fatigue">Fatigue</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="fatigueYes" id="fatigueYes">
+                    <label for="fatigueYes">Yes</label>
+                    <input type="checkbox" name="fatigueNo" id="fatigueNo">
+                    <label for="fatigueNo">No</label>
+                </div>
+            </div>
+
+            <div class="feature">
+                <label for="gastrointestinal">Gastrointestinal</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="gastrointestinalYes" id="gastrointestinalYes">
+                    <label for="gastrointestinalYes">Yes</label>
+                    <input type="checkbox" name="gastrointestinalNo" id="gastrointestinalNo">
+                    <label for="gastrointestinalNo">No</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="feature">
+                <label for="asthma">Asthma</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="asthmaYes" id="asthmaYes">
+                    <label for="asthmaYes">Yes</label>
+                    <input type="checkbox" name="asthmaNo" id="asthmaNo">
+                    <label for="asthmaNo">No</label>
+                </div>
+            </div>
+
+            <div class="feature">
+                <label for="chronicLungDisease">Chronic Lung Disease</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="chronicLungDiseaseYes" id="chronicLungDiseaseYes">
+                    <label for="chronicLungDiseaseYes">Yes</label>
+                    <input type="checkbox" name="chronicLungDiseaseNo" id="chronicLungDiseaseNo">
+                    <label for="chronicLungDiseaseNo">No</label>
+                </div>
+            </div>
+
+            <div class="feature">
+                <label for="heartDisease">Heart Disease</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="heartDiseaseYes" id="heartDiseaseYes">
+                    <label for="heartDiseaseYes">Yes</label>
+                    <input type="checkbox" name="heartDiseaseNo" id="heartDiseaseNo">
+                    <label for="heartDiseaseNo">No</label>
+                </div>
+            </div>
+
+            <div class="feature">
+                <label for="diabetes">Diabetes</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="diabetesYes" id="diabetesYes">
+                    <label for="diabetesYes">Yes</label>
+                    <input type="checkbox" name="diabetesNo" id="diabetesNo">
+                    <label for="diabetesNo">No</label>
+                </div>
+            </div>
+
+            <div class="feature">
+                <label for="hyperTension">Hyper Tension</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="hyperTensionYes" id="hyperTensionYes">
+                    <label for="hyperTensionYes">Yes</label>
+                    <input type="checkbox" name="hyperTensionNo" id="hyperTensionNo">
+                    <label for="hyperTensionNo">No</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="feature">
+                <label for="abroadTravel">Abroad Travel</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="abroadTravelYes" id="abroadTravelYes">
+                    <label for="abroadTravelYes">Yes</label>
+                    <input type="checkbox" name="abroadTravelNo" id="abroadTravelNo">
+                    <label for="abroadTravelNo">No</label>
+                </div>
+            </div>
+
+            <div class="feature">
+                <label for="contactWithCovidPatient">Contact with COVID Patient</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="contactWithCovidPatientYes" id="contactWithCovidPatientYes">
+                    <label for="contactWithCovidPatientYes">Yes</label>
+                    <input type="checkbox" name="contactWithCovidPatientNo" id="contactWithCovidPatientNo">
+                    <label for="contactWithCovidPatientNo">No</label>
+                </div>
+            </div>
+
+            <div class="feature">
+                <label for="attendedLargeGathering">Attended Large Gathering</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="attendedLargeGatheringYes" id="attendedLargeGatheringYes">
+                    <label for="attendedLargeGatheringYes">Yes</label>
+                    <input type="checkbox" name="attendedLargeGatheringNo" id="attendedLargeGatheringNo">
+                    <label for="attendedLargeGatheringNo">No</label>
+                </div>
+            </div>
+
+            <div class="feature">
+                <label for="visitedPublicExposedPlaces">Visited Public Exposed Places</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="visitedPublicExposedPlacesYes" id="visitedPublicExposedPlacesYes">
+                    <label for="visitedPublicExposedPlacesYes">Yes</label>
+                    <input type="checkbox" name="visitedPublicExposedPlacesNo" id="visitedPublicExposedPlacesNo">
+                    <label for="visitedPublicExposedPlacesNo">No</label>
+                </div>
+            </div>
+
+            <div class="feature">
+                <label for="familyWorkingInPublicPlaces">Family working in Public Exposed Places</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="familyWorkingInPublicPlacesYes" id="familyWorkingInPublicPlacesYes">
+                    <label for="familyWorkingInPublicPlacesYes">Yes</label>
+                    <input type="checkbox" name="familyWorkingInPublicPlacesNo" id="familyWorkingInPublicPlacesNo">
+                    <label for="familyWorkingInPublicPlacesNo">No</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="feature">
+                <label for="wearingMasks">Wearing Masks</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="wearingMasksYes" id="wearingMasksYes">
+                    <label for="wearingMasksYes">Yes</label>
+                    <input type="checkbox" name="wearingMasksNo" id="wearingMasksNo">
+                    <label for="wearingMasksNo">No</label>
+                </div>
+            </div>
+
+            <div class="feature">
+                <label for="sanitizationFromMarket">Sanitization from Market</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="sanitizationFromMarketYes" id="sanitizationFromMarketYes">
+                    <label for="sanitizationFromMarketYes">Yes</label>
+                    <input type="checkbox" name="sanitizationFromMarketNo" id="sanitizationFromMarketNo">
+                    <label for="sanitizationFromMarketNo">No</label>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+        <div>
+            {% if prediction_result == 1 %}
+            <h2 style="color: red">You may be affected with COVID-19 virus! Please get RTPCR test ASAP and stay in Quarantine for 14 days!</h2>
+            {% else %}
+            <h2 style="color: green">You do not have any symptoms of COVID-19. Stay home! Stay safe!</h2>
+            {% endif %}
+        </div>
+    </form>
+    
+</body>
+
+</html>
