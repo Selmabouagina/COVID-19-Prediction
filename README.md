@@ -2,6 +2,38 @@
 
  This is a simple web application built using Flask that predicts the likelihood of a person having COVID-19 based on provided symptoms and conditions.
 
+ ## Dataset Description
+
+The dataset used in this project is named "Covid Dataset.csv". It includes various features related to symptoms and conditions, with the target variable being 'COVID-19'. The features are preprocessed, and label encoding is applied to categorical columns.
+
+### Features
+
+- 'Breathing Problem'
+- 'Fever'
+- 'Dry Cough'
+- 'Sore throat'
+- 'Running Nose'
+- 'Asthma'
+- 'Chronic Lung Disease'
+- 'Headache'
+- 'Heart Disease'
+- 'Diabetes'
+- 'Hyper Tension'
+- 'Fatigue'
+- 'Gastrointestinal'
+- 'Abroad travel'
+- 'Contact with COVID Patient'
+- 'Attended Large Gathering'
+- 'Visited Public Exposed Places'
+- 'Family working in Public Exposed Places'
+- 'Wearing Masks'
+- 'Sanitization from Market'
+- 'COVID-19' (Target variable)
+
+## Exploratory Data Analysis (EDA)
+
+The exploratory data analysis includes visualizations to understand the distribution of COVID-19 cases, missing values, histograms of numerical columns, and correlation matrix heatmaps.
+
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
