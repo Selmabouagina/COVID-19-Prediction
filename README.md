@@ -2,6 +2,13 @@
 
  This is a simple web application built using Flask that predicts the likelihood of a person having COVID-19 based on provided symptoms and conditions.
 
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+```bash
+pip install -r requirements.txt
+```
+
  ## Screenshots
 
 ### Home Page
